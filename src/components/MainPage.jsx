@@ -47,12 +47,12 @@ const MainPage = ({ setMode, mode }) => {
                     ))}
 
                 </div>
-                <span className='font-semibold text-3xl my-20'>You can control the website</span>
-                <p className='font-medium text-xl ' >Try saying : <code>Change to dark mode / light mode</code></p>
+                <span className='font-semibold text-3xl my-20 '>You can control the website</span>
+                <p className='font-medium text-xl text-center ' >Try saying : <code>Change to dark mode / light mode</code></p>
                 <span className='font-semibold text-3xl my-20'>You can listen to jokes</span>
-                <p className='font-medium text-xl ' >Try saying : <code>Let's play yo mama jokes</code></p>
+                <p className='font-medium text-xl text-center ' >Try saying : <code>Let's play yo mama jokes</code></p>
                 <span className='font-semibold text-3xl my-20'>And much more!</span>
-                <p className='font-medium text-xl ' ><code>This app is under development</code></p>
+                <p className='font-medium text-xl text-center ' ><code>This app is under development</code></p>
             </div>
         </div>
     )
