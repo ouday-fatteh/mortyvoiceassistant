@@ -1,0 +1,24 @@
+#one:hover #two {
+  width: 10rem;
+}
+#one:hover #four {
+  display: block;
+}
+#two {
+  width: 0px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#one:hover #three {
+  color: rgb(30, 30, 30);
+}
+
+#four {
+  transition: all 0.2s ease-in-out;
+  margin-left: 10px;
+  display: none;
+  color: rgb(30, 30, 30);
+}
