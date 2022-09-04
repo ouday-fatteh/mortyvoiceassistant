@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Navbar, MainPage, Footer } from "./components";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [mode, setMode] = useState("dark");
+
+  useEffect(() => {
+    const toggleMode = (mode) => {
+      const css =
+        mode === "dark"
+          ? "linear-gradient(109.6deg,rgb(36, 45, 57) 11.2%,rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%)"
+          : "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)";
+      const body = document.body || document.getElementsByTagName("body")[0];
+      body.style.background = css;
+    };
+    toggleMode(mode);
+  }, [mode]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar mode={mode} />
+      <MainPage setMode={setMode} mode={mode} />
+      <Footer mode={mode} />
     </div>
   );
 }
